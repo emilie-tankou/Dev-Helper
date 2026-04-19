@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+ 
+/* --- Variables CSS --- */
+:root {
+  --bg-primary:    #0d0f14;
+  --bg-secondary:  #13161e;
+  --bg-card:       #1a1d27;
+  --accent-cyan:   #00e5c8;
+  --accent-violet: #7c5cfc;
+  --accent-pink:   #ff4d8d;
+  --text-primary:  #eef0f7;
+  --text-secondary:#8b90a7;
+  --text-muted:    #4a4f68;
+  --border:        #252836;
+  --border-glow:   rgba(0, 229, 200, 0.25);
+  --font-display:  'Syne', sans-serif;
+  --font-mono:     'JetBrains Mono', monospace;
+  --radius-sm:     8px;
+  --radius-md:     14px;
+  --radius-lg:     20px;
+  --transition:    0.2s ease;
+}
+ 
+/* Mode clair */
+[data-theme="light"] {
+  --bg-primary:    #f0f2f8;
+  --bg-secondary:  #e4e7f2;
+  --bg-card:       #ffffff;
+  --text-primary:  #0d0f14;
+  --text-secondary:#4a4f68;
+  --text-muted:    #9398b0;
+  --border:        #d0d4e8;
+}
+ 
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+ 
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+ 
+/* --- Layout --- */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+ 
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  padding: 40px;
+}
+ 
+/* --- Typographies --- */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+ 
+/* --- Scrollbar --- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-cyan); }
+ 
+/* --- Tag badge --- */
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: rgba(0, 229, 200, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 229, 200, 0.25);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+ 
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+.fade-in { animation: fadeInUp 0.4s ease forwards; }
+ 
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .main-content { margin-left: 0; padding: 20px; }
+}
