@@ -1,3 +1,7 @@
+/* =========================================
+   DEVHELPER — Page Checklist
+   ========================================= */
+ 
 .checklist-page {
   max-width: 800px;
   animation: fadeInUp 0.4s ease both;
@@ -19,18 +23,8 @@
   margin-bottom: 12px;
 }
  
-.progress-bar__label {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-weight: 600;
-}
- 
-.progress-bar__percent {
-  font-family: var(--font-mono);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
-}
+.progress-bar__label  { font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; }
+.progress-bar__percent { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--accent-cyan); }
  
 .progress-bar__track {
   height: 8px;
@@ -46,15 +40,105 @@
   transition: width 0.5s ease;
 }
  
+/* --- Bouton ajouter (réutilisé de memo.css via global) --- */
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  margin-bottom: 16px;
+  background: rgba(0, 229, 200, 0.08);
+  border: 1px dashed rgba(0, 229, 200, 0.4);
+  border-radius: var(--radius-md);
+  color: var(--accent-cyan);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+ 
+.add-btn:hover { background: rgba(0, 229, 200, 0.14); }
+ 
+.add-btn--cancel {
+  background: rgba(255, 77, 141, 0.08);
+  border-color: rgba(255, 77, 141, 0.4);
+  color: var(--accent-pink);
+}
+ 
+/* --- Formulaire d'ajout --- */
+.add-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.25s ease both;
+}
+ 
+.add-form--inline { margin: 8px 0 12px; padding: 16px; }
+.add-form__title  { font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; }
+ 
+.add-form__fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+ 
+.add-form__field { display: flex; flex-direction: column; gap: 6px; }
+ 
+.add-form__label {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+ 
+.add-form__input {
+  padding: 9px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 0.87rem;
+  outline: none;
+  transition: border-color var(--transition);
+}
+ 
+.add-form__input::placeholder { color: var(--text-muted); }
+.add-form__input:focus         { border-color: var(--accent-cyan); }
+.add-form__input--short        { max-width: 80px; }
+ 
+.add-form__submit {
+  padding: 9px 20px;
+  background: var(--accent-cyan);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #000;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+ 
+.add-form__submit:disabled          { opacity: 0.4; cursor: not-allowed; }
+.add-form__submit:not(:disabled):hover { opacity: 0.85; }
+ 
 /* --- Groupes de tâches --- */
-.checklist-group {
-  margin-bottom: 28px;
+.checklist-group { margin-bottom: 28px; }
+ 
+.checklist-group--custom .checklist-group__title {
+  border-color: rgba(124, 92, 252, 0.2);
 }
  
 .checklist-group__title {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: 0.75rem;
   font-family: var(--font-mono);
   text-transform: uppercase;
@@ -63,9 +147,50 @@
   margin-bottom: 10px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
 }
  
 .checklist-group__icon { font-size: 1rem; }
+ 
+/* Badge perso */
+.custom-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: rgba(124, 92, 252, 0.15);
+  color: var(--accent-violet);
+  border: 1px solid rgba(124, 92, 252, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+ 
+/* Boutons d'action sur les groupes */
+.group-action-btn {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  transition: color var(--transition), border-color var(--transition);
+}
+ 
+.group-action-btn:hover         { color: var(--accent-cyan); border-color: var(--accent-cyan); }
+.group-action-btn:first-of-type { margin-left: auto; }
+.group-action-btn + .group-action-btn { margin-left: 4px; }
+ 
+.group-action-btn--delete:hover { color: var(--accent-pink); border-color: var(--accent-pink); }
+ 
+/* Message groupe vide */
+.group-empty {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 12px 16px;
+  font-style: italic;
+}
  
 /* --- Item de checklist --- */
 .checklist-item {
@@ -77,21 +202,13 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   margin-bottom: 8px;
-  cursor: pointer;
   transition: border-color var(--transition), background var(--transition);
   user-select: none;
 }
  
-.checklist-item:hover {
-  border-color: rgba(0, 229, 200, 0.3);
-  background: rgba(0, 229, 200, 0.03);
-}
+.checklist-item:hover { border-color: rgba(0, 229, 200, 0.3); }
+.checklist-item.done  { opacity: 0.6; }
  
-.checklist-item.done {
-  opacity: 0.6;
-}
- 
-/* Checkbox custom */
 .checklist-item__checkbox {
   width: 20px;
   height: 20px;
@@ -102,9 +219,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color var(--transition), background var(--transition);
   font-size: 0.7rem;
   color: transparent;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
 }
  
 .checklist-item.done .checklist-item__checkbox {
@@ -113,9 +231,7 @@
   color: #000;
 }
  
-.checklist-item__content {
-  flex: 1;
-}
+.checklist-item__content { flex: 1; cursor: pointer; }
  
 .checklist-item__title {
   font-size: 0.9rem;
@@ -136,6 +252,22 @@
   line-height: 1.5;
 }
  
+/* Bouton supprimer un item */
+.item-delete-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 2px 4px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: color var(--transition);
+  align-self: center;
+}
+ 
+.item-delete-btn:hover { color: var(--accent-pink); }
+ 
 /* --- Bouton reset --- */
 .checklist-reset {
   display: flex;
@@ -154,7 +286,5 @@
   margin-top: 20px;
 }
  
-.checklist-reset:hover {
-  border-color: var(--accent-pink);
-  color: var(--accent-pink);
-}
+.checklist-reset:hover { border-color: var(--accent-pink); color: var(--accent-pink); }
+ 

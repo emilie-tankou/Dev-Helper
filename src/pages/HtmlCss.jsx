@@ -1,7 +1,7 @@
 // src/pages/HtmlCss.jsx
-// Page mémo HTML & CSS — utilise le composant MemoPage générique
+// Page mémo HTML & CSS — passe la clé localStorage pour les commandes perso
  
-import MemoPage from './components/MemoPage';
+import MemoPage from '../components/MemoPage';
 import htmlData from '../data/html.json';
  
 function HtmlCss() {
@@ -12,6 +12,7 @@ function HtmlCss() {
       icon="🎨"
       iconTheme="html"
       data={htmlData}
+      storageKey="dh-custom-html"
     />
   );
 }

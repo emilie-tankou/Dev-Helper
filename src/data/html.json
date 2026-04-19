@@ -1,146 +1,21 @@
 [
   {
-    "category": "Structure HTML de base",
+    "category": "Exemples",
     "items": [
       {
         "id": 1,
-        "cmd": "<!DOCTYPE html>",
-        "desc": "Déclare le type de document HTML5"
-      },
-      {
-        "id": 2,
-        "cmd": "<html lang='fr'>",
-        "desc": "Balise racine du document, avec la langue définie"
-      },
-      {
-        "id": 3,
-        "cmd": "<meta charset='UTF-8'>",
-        "desc": "Définit l'encodage de caractères en UTF-8"
-      },
-      {
-        "id": 4,
-        "cmd": "<meta name='viewport' content='width=device-width'>",
-        "desc": "Rend la page responsive sur mobile"
-      },
-      {
-        "id": 5,
-        "cmd": "<link rel='stylesheet' href='style.css'>",
-        "desc": "Lie une feuille de style CSS externe"
-      }
-    ]
-  },
-  {
-    "category": "Balises sémantiques",
-    "items": [
-      {
-        "id": 6,
         "cmd": "<header>",
         "desc": "En-tête de la page ou d'une section"
       },
       {
-        "id": 7,
-        "cmd": "<nav>",
-        "desc": "Zone de navigation principale"
-      },
-      {
-        "id": 8,
-        "cmd": "<main>",
-        "desc": "Contenu principal de la page"
-      },
-      {
-        "id": 9,
-        "cmd": "<section>",
-        "desc": "Section thématique du contenu"
-      },
-      {
-        "id": 10,
-        "cmd": "<article>",
-        "desc": "Contenu autonome (post, article de blog)"
-      },
-      {
-        "id": 11,
-        "cmd": "<aside>",
-        "desc": "Contenu secondaire ou barre latérale"
-      },
-      {
-        "id": 12,
-        "cmd": "<footer>",
-        "desc": "Pied de page"
-      }
-    ]
-  },
-  {
-    "category": "CSS — Flexbox",
-    "items": [
-      {
-        "id": 13,
+        "id": 2,
         "cmd": "display: flex;",
         "desc": "Active le modèle Flexbox sur un conteneur"
       },
       {
-        "id": 14,
-        "cmd": "flex-direction: row | column;",
-        "desc": "Définit l'axe principal (horizontal ou vertical)"
-      },
-      {
-        "id": 15,
-        "cmd": "justify-content: center | space-between;",
-        "desc": "Aligne les éléments sur l'axe principal"
-      },
-      {
-        "id": 16,
-        "cmd": "align-items: center | stretch;",
-        "desc": "Aligne les éléments sur l'axe secondaire"
-      },
-      {
-        "id": 17,
-        "cmd": "gap: 16px;",
-        "desc": "Espace entre les éléments flex"
-      },
-      {
-        "id": 18,
-        "cmd": "flex: 1;",
-        "desc": "L'élément prend tout l'espace disponible"
-      }
-    ]
-  },
-  {
-    "category": "CSS — Grid",
-    "items": [
-      {
-        "id": 19,
+        "id": 3,
         "cmd": "display: grid;",
-        "desc": "Active le modèle CSS Grid"
-      },
-      {
-        "id": 20,
-        "cmd": "grid-template-columns: repeat(3, 1fr);",
-        "desc": "Crée 3 colonnes de taille égale"
-      },
-      {
-        "id": 21,
-        "cmd": "grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));",
-        "desc": "Grille responsive sans media queries"
-      },
-      {
-        "id": 22,
-        "cmd": "grid-column: span 2;",
-        "desc": "Un élément occupe 2 colonnes"
-      }
-    ]
-  },
-  {
-    "category": "CSS — Variables",
-    "items": [
-      {
-        "id": 23,
-        "cmd": ":root { --color: #00e5c8; }",
-        "desc": "Déclare une variable CSS globale"
-      },
-      {
-        "id": 24,
-        "cmd": "color: var(--color);",
-        "desc": "Utilise une variable CSS"
+        "desc": "Active le modèle CSS Grid sur un conteneur"
       }
     ]
   }

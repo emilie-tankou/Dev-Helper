@@ -1,7 +1,7 @@
 // src/pages/JavaScript.jsx
-// Page mémo JavaScript — utilise le composant MemoPage générique
+// Page mémo JavaScript — passe la clé localStorage pour les commandes perso
  
-import MemoPage from './components/MemoPage';
+import MemoPage from '../components/MemoPage';
 import jsData from '../data/javascript.json';
  
 function JavaScript() {
@@ -12,9 +12,9 @@ function JavaScript() {
       icon="⚡"
       iconTheme="js"
       data={jsData}
+      storageKey="dh-custom-js"
     />
   );
 }
  
 export default JavaScript;
- 
