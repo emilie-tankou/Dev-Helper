@@ -1,0 +1,147 @@
+[
+  {
+    "category": "Initialisation",
+    "items": [
+      {
+        "id": 1,
+        "cmd": "git init",
+        "desc": "Initialise un nouveau dépôt Git dans le dossier courant"
+      },
+      {
+        "id": 2,
+        "cmd": "git clone <url>",
+        "desc": "Clone un dépôt distant en local"
+      },
+      {
+        "id": 3,
+        "cmd": "git remote add origin <url>",
+        "desc": "Associe un dépôt distant à ton projet local"
+      }
+    ]
+  },
+  {
+    "category": "Staging & Commits",
+    "items": [
+      {
+        "id": 4,
+        "cmd": "git status",
+        "desc": "Affiche l'état des fichiers (modifiés, ajoutés, supprimés)"
+      },
+      {
+        "id": 5,
+        "cmd": "git add .",
+        "desc": "Ajoute tous les fichiers modifiés à la zone de staging"
+      },
+      {
+        "id": 6,
+        "cmd": "git add <fichier>",
+        "desc": "Ajoute un fichier spécifique au staging"
+      },
+      {
+        "id": 7,
+        "cmd": "git commit -m 'message'",
+        "desc": "Crée un commit avec un message descriptif"
+      },
+      {
+        "id": 8,
+        "cmd": "git commit --amend",
+        "desc": "Modifie le dernier commit (message ou contenu)"
+      }
+    ]
+  },
+  {
+    "category": "Branches",
+    "items": [
+      {
+        "id": 9,
+        "cmd": "git branch",
+        "desc": "Liste toutes les branches locales"
+      },
+      {
+        "id": 10,
+        "cmd": "git branch <nom>",
+        "desc": "Crée une nouvelle branche"
+      },
+      {
+        "id": 11,
+        "cmd": "git checkout <branche>",
+        "desc": "Bascule sur une branche existante"
+      },
+      {
+        "id": 12,
+        "cmd": "git checkout -b <nom>",
+        "desc": "Crée une branche et bascule dessus immédiatement"
+      },
+      {
+        "id": 13,
+        "cmd": "git merge <branche>",
+        "desc": "Fusionne la branche spécifiée dans la branche courante"
+      },
+      {
+        "id": 14,
+        "cmd": "git branch -d <nom>",
+        "desc": "Supprime une branche fusionnée"
+      }
+    ]
+  },
+  {
+    "category": "Push & Pull",
+    "items": [
+      {
+        "id": 15,
+        "cmd": "git push",
+        "desc": "Envoie les commits locaux vers le dépôt distant"
+      },
+      {
+        "id": 16,
+        "cmd": "git push -u origin main",
+        "desc": "Premier push : lie la branche locale à origin/main"
+      },
+      {
+        "id": 17,
+        "cmd": "git pull",
+        "desc": "Récupère et fusionne les modifications distantes"
+      },
+      {
+        "id": 18,
+        "cmd": "git fetch",
+        "desc": "Récupère les modifications sans fusionner"
+      }
+    ]
+  },
+  {
+    "category": "Historique & Annulation",
+    "items": [
+      {
+        "id": 19,
+        "cmd": "git log",
+        "desc": "Affiche l'historique des commits"
+      },
+      {
+        "id": 20,
+        "cmd": "git log --oneline",
+        "desc": "Historique compact, une ligne par commit"
+      },
+      {
+        "id": 21,
+        "cmd": "git diff",
+        "desc": "Montre les différences entre les fichiers modifiés"
+      },
+      {
+        "id": 22,
+        "cmd": "git reset HEAD~1",
+        "desc": "Annule le dernier commit tout en conservant les fichiers"
+      },
+      {
+        "id": 23,
+        "cmd": "git stash",
+        "desc": "Met de côté les modifications non commitées"
+      },
+      {
+        "id": 24,
+        "cmd": "git stash pop",
+        "desc": "Réapplique les modifications mises de côté"
+      }
+    ]
+  }
+]

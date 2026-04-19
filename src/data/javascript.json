@@ -1,0 +1,152 @@
+[
+  {
+    "category": "Variables & Types",
+    "items": [
+      {
+        "id": 1,
+        "cmd": "const nom = 'valeur';",
+        "desc": "Déclare une constante (ne peut pas être réassignée)"
+      },
+      {
+        "id": 2,
+        "cmd": "let compteur = 0;",
+        "desc": "Déclare une variable réassignable (scope de bloc)"
+      },
+      {
+        "id": 3,
+        "cmd": "typeof valeur",
+        "desc": "Retourne le type d'une valeur : string, number, boolean, object..."
+      }
+    ]
+  },
+  {
+    "category": "Fonctions",
+    "items": [
+      {
+        "id": 4,
+        "cmd": "function maFonction(param) { }",
+        "desc": "Déclare une fonction classique"
+      },
+      {
+        "id": 5,
+        "cmd": "const maFonction = (param) => { };",
+        "desc": "Fonction fléchée (arrow function)"
+      },
+      {
+        "id": 6,
+        "cmd": "const double = x => x * 2;",
+        "desc": "Arrow function courte avec retour implicite"
+      }
+    ]
+  },
+  {
+    "category": "Tableaux (Array)",
+    "items": [
+      {
+        "id": 7,
+        "cmd": "arr.map(item => ...)",
+        "desc": "Crée un nouveau tableau transformé"
+      },
+      {
+        "id": 8,
+        "cmd": "arr.filter(item => ...)",
+        "desc": "Filtre les éléments selon une condition"
+      },
+      {
+        "id": 9,
+        "cmd": "arr.find(item => ...)",
+        "desc": "Retourne le premier élément correspondant"
+      },
+      {
+        "id": 10,
+        "cmd": "arr.forEach(item => ...)",
+        "desc": "Itère sur chaque élément sans retour"
+      },
+      {
+        "id": 11,
+        "cmd": "arr.includes(valeur)",
+        "desc": "Vérifie si un élément est dans le tableau"
+      },
+      {
+        "id": 12,
+        "cmd": "[...arr1, ...arr2]",
+        "desc": "Fusionne deux tableaux (spread operator)"
+      }
+    ]
+  },
+  {
+    "category": "Objets",
+    "items": [
+      {
+        "id": 13,
+        "cmd": "const { nom, age } = personne;",
+        "desc": "Destructuration d'objet"
+      },
+      {
+        "id": 14,
+        "cmd": "const obj = { ...base, extra: true };",
+        "desc": "Copie un objet en ajoutant des propriétés"
+      },
+      {
+        "id": 15,
+        "cmd": "Object.keys(obj)",
+        "desc": "Retourne un tableau des clés de l'objet"
+      },
+      {
+        "id": 16,
+        "cmd": "Object.entries(obj)",
+        "desc": "Retourne un tableau de paires [clé, valeur]"
+      }
+    ]
+  },
+  {
+    "category": "Asynchrone",
+    "items": [
+      {
+        "id": 17,
+        "cmd": "async function getData() { }",
+        "desc": "Déclare une fonction asynchrone"
+      },
+      {
+        "id": 18,
+        "cmd": "const data = await fetch(url);",
+        "desc": "Attend la résolution d'une promesse"
+      },
+      {
+        "id": 19,
+        "cmd": "const json = await response.json();",
+        "desc": "Convertit la réponse HTTP en JSON"
+      },
+      {
+        "id": 20,
+        "cmd": "try { } catch (err) { }",
+        "desc": "Gestion des erreurs asynchrones"
+      }
+    ]
+  },
+  {
+    "category": "DOM",
+    "items": [
+      {
+        "id": 21,
+        "cmd": "document.querySelector('.class')",
+        "desc": "Sélectionne le premier élément correspondant au sélecteur CSS"
+      },
+      {
+        "id": 22,
+        "cmd": "element.addEventListener('click', fn)",
+        "desc": "Écoute un événement sur un élément"
+      },
+      {
+        "id": 23,
+        "cmd": "element.classList.toggle('active')",
+        "desc": "Ajoute/supprime une classe sur un élément"
+      },
+      {
+        "id": 24,
+        "cmd": "element.textContent = 'Texte'",
+        "desc": "Modifie le contenu textuel d'un élément"
+      }
+    ]
+  }
+]
