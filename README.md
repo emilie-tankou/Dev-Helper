@@ -8,7 +8,7 @@ DevHelper est ton outil personnel pour centraliser tes commandes essentielles (G
  
 ## 🚀 Démo en ligne
  
-👉 [Voir le projet en ligne](#) *(lien à mettre à jour après déploiement sur Vercel)*
+👉 [Voir le projet en ligne](https://dev-helper-coral.vercel.app)
  
 ---
  
@@ -39,7 +39,7 @@ DevHelper est ton outil personnel pour centraliser tes commandes essentielles (G
  
 ```bash
 # 1. Cloner le dépôt
-git clone https://github.com/emilie-tankou3/devhelper.git
+git clone https://github.com/emilie-tankou/devhelper.git
  
 # 2. Se déplacer dans le dossier
 cd devhelper
